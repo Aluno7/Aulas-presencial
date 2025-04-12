@@ -1,0 +1,43 @@
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+.introducao{
+    background-color: cadetblue;
+    color: red;
+    padding: 20px;
+    
+}
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient( green, #a2d8a1);
+    height: 100%;
+}
+.descricao{
+    
+    background-color: yellow;
+    color: orange;
+}
+.p-descricao:hover{
+
+    color: purple;
+}
+footer{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.ul-navbar{display: inline-block;
+
+    list-style: none;
+    padding: 10px;
+}
+.ul-navbar:hover{
+
+    color: red;
+}
