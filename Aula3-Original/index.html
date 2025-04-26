@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aula 3</title>
+  
+    <style>
+        .box {
+            display: grid; 
+
+            border: 5px solid red;
+            padding: 20px;  
+            margin: 15px;
+            width: 100px;
+            height: 200px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 200px); /* 2 colunas iguais */
+            gap: 10px; /* espaço entre os boxes */
+            border: 5px solid blue;
+            padding: 20px;  
+            margin: 15px;
+        }
+    </style>
+</head>
+<body><div class="container">
+    <div class="box">
+        <h1>Box</h1>
+        <p>1</p>
+    </div>
+    <div class="box">
+        <h1>Box</h1>
+        <p>2</p>
+    </div>
+    <div class="box">
+        <h1>Box</h1>
+        <p>3</p>
+    </div>
+    <div class="box">
+        <h1>Box</h1>
+        <p>4</p>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aula 3.1</title>
+  
+    <style>
+      html{
+        width: 100%;
+        height: 100%;
+      }
+        .container {
+          border:2px solid green;
+          display:grid;
+          grid-template-areas: "header header" "aside main" "footer footer";
+          grid-template-columns: 1fr 350px;
+          grid-template-rows: 60px auto 40px;
+          gap: 10px;
+          padding: 20px;
+        }
+        header{
+            border:2px solid red;
+            grid-area: header;
+    
+        }
+        aside{
+            border:2px solid yellow;
+            grid-area: aside;
+        }
+        main{
+            border:2px solid blue;
+            grid-area: main;
+        }
+        footer{
+            border:2px solid purple;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>    
+    <div class="container">
+    <header>Cabeçalho</header>
+    <aside>Menu</aside>
+    <main>Contêudo</main>
+    <footer>Rodapé</footer>
+    </div>
+</body>
+</html>

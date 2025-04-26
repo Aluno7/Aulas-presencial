@@ -1,0 +1,82 @@
+.container{
+    height: 800px;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    flex: 1;
+    border: 2px solid red;
+    margin: 2px;
+    padding: 10px;
+    font-size: 30px;
+}
+#top-container{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    
+}
+#box3{
+    width: 60%;
+    flex:initial;
+    
+}
+#middle-container{
+    justify-content: center;
+    align-items: center;
+}
+#box4 {
+    background-color: lightblue; /* Destaque para o Box 4 */
+    height: 220px; /* Box 4 maior */
+    border: 5px solid darkblue; /* Borda mais destacada */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#bottom-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura flexível */
+    gap: 10px; /* Espaço entre os boxes */
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 15px;
+}
+
+#box5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 colunas de largura igual */
+    grid-template-rows: 100px;       /* Apenas uma linha para todos os boxes */
+    gap: 10px; /* Espaço entre os boxes */
+    padding: 10px;
+    border: 0;
+}
+
+#box6, #box7, #box8, #box9 {
+    width: 100%;    /* Ocupa toda a largura da coluna */
+    height: 100px;  /* Altura de 100px para os boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray; /* Cor de fundo para visualização */
+}
+
+#box6 {
+    background-color: lightblue; /* Cor para visualização */
+}
+
+#box7 {
+    background-color: lightgreen; /* Cor para visualização */
+}
+
+#box8 {
+    background-color: lightcoral; /* Cor para visualização */
+}
+
+#box9 {
+    background-color: lightyellow; /* Cor para visualização */
+}
