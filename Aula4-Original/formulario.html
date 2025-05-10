@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário</title>
+  <link href="https://fonts.googleapis.com/to:wghcss2?family=Robot@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    }
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        background-color: #66a6ff;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    /* Estilo inicial para os inputs (sem borda vermelha ou verde) */
+    input, textarea {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc; /* Borda cinza claro inicial */
+        border-radius: 5px;
+        resize: vertical;
+        width: 100%; /* Para que o input ocupe toda a largura do contêiner */
+        background-color: white; /* Fundo branco */
+        transition: border-color 0.3s, background-color 0.3s; /* Transição suave */
+    }
+
+    /* Estilo quando o input estiver com valor inválido */
+    .invalid {
+        border: 2px solid red; /* Borda vermelha */
+        background-color: #f8d7da; /* Cor de fundo suave para indicar erro */
+    }
+
+    /* Estilo quando o input for válido */
+    .valid {
+        border: 2px solid green; /* Borda verde quando válido */
+        background-color: #94e6a7; /* Fundo verde claro para indicar sucesso */
+    }
+
+  </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Formulário Básico</h1>
+    <form id="form" action="" method="POST">
+        <label for="formTutor">Tutor:</label>
+        <input type="text" id="formTutor" name="nomeTutor" placeholder="Nome Completo" required>
+
+        <label for="nomeDog">Cachorro:</label>
+        <input type="text" id="nomeDog" name="nomeDog" placeholder="Nome do Cachorro" required>
+
+        <label for="idadeDog">Idade do Cachorro:</label>
+        <input type="number" id="idadeDog" name="idadeDog" min="1" max="99" placeholder="Idade" required>
+
+        <label for="dataCadastro">Data do Cadastro: </label>
+        <input type="date" id="dataCadastro" max="3" name="dataCadastro" required>
+
+        <label for="StatusCastrado" id="StatusCastrado">É Castrado: </label>
+        <input type="checkbox" name="Castrado">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Seleciona o formulário
+        const form = document.getElementById('form');
+
+        // Função para verificar se o campo está vazio ou não
+        function validateInput(input) {
+            if (input.value.trim() === "") {
+                // Se o campo estiver vazio, coloca a borda vermelha e o fundo vermelho claro
+                input.classList.add('invalid');
+                input.classList.remove('valid');
+            } else {
+                // Se o campo estiver preenchido corretamente, coloca a borda verde e o fundo verde claro
+                input.classList.add('valid');
+                input.classList.remove('invalid');
+            }
+        }
+
+        // Função que valida o formulário antes de enviar
+        form.addEventListener('submit', function(event) {
+            // Impede o envio do formulário para validar os campos
+            event.preventDefault();
+
+            // Valida todos os inputs do formulário
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(validateInput);
+
+            // Se o formulário estiver válido, você pode enviá-lo aqui, por exemplo:
+            // form.submit();
+        });
+
+        // Valida os campos individualmente enquanto o usuário digita
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+            // Adiciona o evento de "blur" para validar quando o campo perder o foco
+            input.addEventListener('blur', function() {
+                validateInput(input);
+            });
+
+            // Adiciona o evento de "input" para validar enquanto o usuário digita
+            input.addEventListener('input', function() {
+                // Durante a digitação, removemos as classes de erro/sucesso
+                input.classList.remove('invalid', 'valid');
+            });
+        });
+    </script>
+</body>
+</html>
+
+</html>

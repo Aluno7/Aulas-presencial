@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário sem I.A</title>
+  <style>
+
+    /*
+  _____                           _____   _____  _____ 
+ |_   _|                         / ____| / ____|/ ____|
+   | |   ___  __ _  _ __  ___   | |     | (___ | (___  
+   | |  / __|/ _` || '__|/ _ \  | |      \___ \ \___ \ 
+  _| |_| (__| (_| || |  | (_) | | |____  ____) |____) |
+ |_____|\___|\__,_||_|   \___/   \_____||_____/|_____/ 
+                                                       
+Essa é uma demonstração da atividade prática que eu fiz sem usar inteligência artificial explicando tudo.
+Agora se é certo ou não eu não sei
+
+ */
+    body{
+        font-family: 'Times New Roman', Times, serif;/*Fonte da escrita do corpo da página*/
+        background-image: url('img//naruto.jpg');/*Imagem de fundo do corpo da página*/
+        background-position: center;/*Posição da imagem de fundo*/
+        background-repeat: no-repeat;/*Fazer com que a imagem de fundo não se repita*/
+        background-size: cover;/*Cobrir o fundo da tela com a imagem*/
+        background-attachment: fixed;/*Fazer o background ficar fixado*/
+    }
+    form{
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1);/*Sombra do formulário*/
+
+        flex-direction: column;/*alinhamento da coluna do formulário1*/
+        width: 350px;/*Tamanho do formulário*/
+        justify-content: center;/*Atribuições ao centro*/
+        align-items: center;/*Atribuições ao centro*/
+        text-align: center;/*Atribuições ao centro em relação ao texto*/
+        margin: auto;/*Define a margem automatico*/
+        background: linear-gradient(90deg, #9efe89, #66a6ff);/*Cor de fundo do formulário dividida em duas cores com um angúlo de 90 graus*/
+        padding: 30px;/*Espaçamento de conteúdo*/
+        border-radius: 10px;/*borda arredondada*/
+            display: flex;/*Alinhamento do formulário*/        
+    }
+    label,input{
+        width: 100%;/*Tamanho total do label e o input*/
+        padding: 10px;/*Margem de espaçamento entre eles*/
+    }
+    textarea{
+        width: 100%;/*Tamanho total do textarea*/
+        padding: 10px;/*Espaçamento entre os elementos*/
+    }
+    h1{
+        text-align: center;/*Define o texto alinhado ao centro*/
+        color:white;/*Cor branca do texto*/
+        text-shadow: 3px 3px 3px black;/*Sombra do texto*/
+
+    }
+    button{
+        background-color: black;/*Background preto do botão*/
+        color: white;/*Cor branca do botão*/
+        width: 150PX;/*Tamanho de largura do botão*/
+        height: 50px;/*Tamanho de altura do botão*/
+        margin-top: 20px;/*Espaçamento de 20px para baixo*/
+        border-radius: 10px;/*Borda arredondada*/
+    }
+    button:hover{
+        background-color: white;/*Background branco do botão ao passar por cima*/
+        color: black;/*color do botão ao passar por cima*/
+        width: 150PX;/*Tamanho de largura do botão*/
+        height: 50px;/*Tamanho de altura do botão*/
+        margin-top: 20px;/*Espaçamento de 20px para baixo*/
+        border-radius: 10px;/*Borda arredondada*/
+    }
+
+    </style>
+    </head>
+    <body>
+        <h1>Formulário feio sem I.A</h1>
+        <form action="" method="post">
+            <label id="nome" name="nomeDaPessoa">Nome: </label>
+            <input type="text"  id="nome" name="nomeDaPessoa" placeholder="Digite o nome" required>
+            <label id="email" name="emailDaPessoa">E-Mail: </label>
+            <input type="email" id="email" name="emailDaPessoa" required placeholder="exemplo@gmail.com">
+            <label id="textarea" name="corpoDoTexto" >Digite seu texto aqui: </label>
+            <textarea id="textarea" placeholder="Digite aqui o seu texto" name="corpoDoTexto" rows="5"></textarea>
+            <button type="submit">Enviar</button>
+
+
+        </form>
+
+    </body>
+    </html>
